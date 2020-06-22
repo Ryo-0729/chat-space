@@ -13,7 +13,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_name|string|null: false,
+|name|string|null: false,
 add_index: true|
 |email|string|null: false,
 unique: true|
@@ -29,4 +29,4 @@ has_many:tweets
 |message|string|text|image|null:false, add_index: true|
 
 ### asociation
-has_many :users
+ belongs_to :users
