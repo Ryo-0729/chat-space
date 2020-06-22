@@ -29,4 +29,16 @@ has_many:tweets
 |message|string|text|image|null:false, add_index: true|
 
 ### asociation
- belongs_to :users
+ belongs_to:users
+ belongs_to:groups
+
+## groups
+|Column|Type|Options|
+|------|----|-------|
+|group_name|string|
+null:false, unique:true|
+
+### association
+has_many:groups_users
+has_many:users
+has_many:twwets
