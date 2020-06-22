@@ -18,19 +18,26 @@ add_index: true|
 |email|string|null: false,
 unique: true|
 |password|string|null:false|
+|password confirmation|string|null: false|
 
 ### asociation
 has_many:groups_users
+has_many:groups,though:groups_users
 has_many:tweets
 
 ## tweets
 |Column|Type|Options|
 |------|----|-------|
-|message|string|text|image|null:false, add_index: true|
+|body|text|
+|image|string|
+|group_id|integer|null: false,
+foreign_key: true|
+|user_id|integer|null: false, 
+foreign_key: true|
 
 ### asociation
- belongs_to:users
- belongs_to:groups
+ belongs_to:user
+ belongs_to:group
 
 ## groups
 |Column|Type|Options|
@@ -40,5 +47,5 @@ null:false, unique:true|
 
 ### association
 has_many:groups_users
-has_many:users
+has_many:users, through:groups_users
 has_many:twwets
