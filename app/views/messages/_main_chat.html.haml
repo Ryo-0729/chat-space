@@ -17,8 +17,7 @@
     = render @messages
 
   .form
-    .form__post__form
-    = form_with model: [@group, @message] do |f|
+    = form_for [@group, @message] do |f|
       = f.text_field :content, class: "form__post__form__message" , placeholder: "  type a message"
       = f.label :image, class: "form__post__form__input-box__image" do
         = icon('fas', 'image', class: "form__form__icon")
