@@ -6,7 +6,7 @@
   .header {
     width: 300px;
     height: 100px;
-    background-color: #253141;
+    background-color: rgba(41, 41, 194, 0.5);
     display: flex;
     align-items: center;
     &__zone {
@@ -38,7 +38,7 @@
   }
   .groups__list{
     height: calc(100vh - 100px);
-    background-color: #2f3e51;
+    background-color: rgb(39, 137, 248);
     overflow: scroll;
   }
   .groups {
@@ -57,5 +57,8 @@
     a{ 
       text-decoration: none;
     }
+  }
+  .groups:hover {
+    background-color: rgb(12, 58, 207);
   }
 }
